@@ -3,27 +3,18 @@
     * manually set up instance variable
     * automatically set up instane variable
 '''
-class Student:            # Class created
-    pass
 
-std_1 = Student()         # instance of the Class
-std_2 = Student()
+"""Automatically create instance variable"""
 
+class Student:  # Class created
+    def __init__(self, firstname, lastname, salary):        # created arguments
+        # self.argument = instance_variable                 # argument & instance do not have to be the same
+        self.firstname = firstname                          # setting the instance variables to the arguments
+        self.lastname = lastname
+        self.salary = salary
+        self.email = firstname + '.' + lastname + '@py.com' # notice: newly set here, wasn't an arguement
 
-"""manually create instance variable"""
-
-std_1.firstname = 'Jamey'
-std_1.lastname = 'Kim'
-std_1.email = 'jamey.kim@py.com'
-std_1.salary = 2000
-
-std_2.firstname = 'Mimi'
-std_2.lastname = 'Stace'
-std_2.email = 'stace.mimi@py.com'
-std_2.salary = 2400
+std_1 = Student('Jamey', 'Kim', 2000 )
+std_2 = Student('Mimi', 'Stace', 2400)
 
 print(std_2.email)
-
-
-
-
