@@ -34,3 +34,4 @@ print(std_1.raised_amount)
 print(Student.raised_amount)
 
 
+
