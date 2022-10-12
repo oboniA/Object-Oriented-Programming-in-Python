@@ -23,3 +23,4 @@ std_2 = Student('Mimi', 'Stace', 2400)
 print(std_2.salary)    # initial salary
 std_2.increase_pay()   # salary after increase method
 print(std_2.salary)    # salary after
+
