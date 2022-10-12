@@ -10,13 +10,18 @@ class Student:                                              # Class created
         self.firstname = firstname                          # setting the instance variables to the arguments
         self.lastname = lastname
         self.salary = salary
-        self.email = firstname + '.' + lastname + '@py.com' # notice: newly set here, wasn't an argument
+
 
     def fullname(self):                                     # creating a method
         return '{} {}'.format(self.firstname, self.lastname)
+
+    def email_address(self):                                # creating method
+        return f"{self.firstname}.{self.lastname} @py.com"
 
 std_1 = Student('Jamey', 'Kim', 2000 )
 std_2 = Student('Mimi', 'Stace', 2400)
 
 print(std_1.fullname())
 print(std_2.fullname())
+
+print(std_1.email_address())
