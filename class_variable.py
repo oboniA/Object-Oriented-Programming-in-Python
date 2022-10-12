@@ -3,7 +3,7 @@
 """
 # Class created
 class Student:
-
+    no_of_students = 0                                      # class variable initiated
     raised_amount = 1.5                                     # class variable
 
     def __init__(self, firstname, lastname, salary):        # created arguments
@@ -12,6 +12,8 @@ class Student:
         self.lastname = lastname
         self.salary = salary
         self.email = firstname + '.' + lastname + '@py.com' # notice: newly set here, wasn't an argument
+
+        Student.no_of_students += 1
 
     def fullname(self):                                     # creating a method for instance variables
         return '{} {}'.format(self.firstname, self.lastname)
@@ -22,10 +24,6 @@ class Student:
 
 std_1 = Student('Jamey', 'Kim', 2000 )
 std_2 = Student('Mimi', 'Stace', 2400)
-
-Student.raised_amount = 2
-
-print(Student.raised_amount)                                # will print the latest value, instead of the class variable
-
+print(Student.no_of_students)                               # if before the instances, will give 0
 
 
