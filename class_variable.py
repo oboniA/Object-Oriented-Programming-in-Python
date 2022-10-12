@@ -24,14 +24,10 @@ std_1 = Student('Jamey', 'Kim', 2000 )
 std_2 = Student('Mimi', 'Stace', 2400)
 
 '''
-checks if the instance variables contain the attribute
-in here they dont have the attribute themselves, 
-but they are accessing from the class variable
+lets us access the data/atributes, methods and variables of the class
 '''
-# print(instance.attribute)
-print(std_2.raised_amount)
-print(std_1.raised_amount)
-print(Student.raised_amount)
+print(std_2.__dict__)
+print(Student.__dict__)
 
 
 
