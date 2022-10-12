@@ -23,11 +23,9 @@ class Student:
 std_1 = Student('Jamey', 'Kim', 2000 )
 std_2 = Student('Mimi', 'Stace', 2400)
 
-'''
-lets us access the data/atributes, methods and variables of the class
-'''
-print(std_2.__dict__)
-print(Student.__dict__)
+Student.raised_amount = 2
+
+print(Student.raised_amount)                                # will print the latest value, instead of the class variable
 
 
 
